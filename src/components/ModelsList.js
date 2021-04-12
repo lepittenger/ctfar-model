@@ -1,4 +1,5 @@
 import React from "react";
+import ModelExcerpt from "./ModelExcerpt";
 
 class ModelsList extends React.Component {
     render() {
@@ -6,16 +7,7 @@ class ModelsList extends React.Component {
             <div className="models-list">
                 <h3>Models</h3>
                 <ul>
-                    <li>
-                        <h4><span className="date">4/12/21</span> My mother said "lorem ipsum dolor"</h4>
-                    </li>
-                    <li><h4><span className="date">4/12/21</span> My mother said "lorem ipsum dolor"</h4></li>
-                    <li><h4><span className="date">4/12/21</span> My mother said "lorem ipsum dolor"</h4></li>
-                    <li><h4><span className="date">4/12/21</span> My mother said "lorem ipsum dolor"</h4></li>
-                    <li><h4><span className="date">4/12/21</span> My mother said "lorem ipsum dolor"</h4></li>
-                    <li><h4><span className="date">4/12/21</span> My mother said "lorem ipsum dolor"</h4></li>
-                    <li><h4><span className="date">4/12/21</span> My mother said "lorem ipsum dolor"</h4></li>
-                    <li><h4><span className="date">4/12/21</span> My mother said "lorem ipsum dolor"</h4></li>
+                    {Object.keys(this.props.models).map(key => <ModelExcerpt key={key}details={this.props.models[key]} />)}
                 </ul>
             </div>
         )
