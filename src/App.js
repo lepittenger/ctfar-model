@@ -1,23 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import Model from './components/Model';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>The CTFAR Model</p>
       </header>
+      <div className="models-wrap">
+        <div className="models-list">
+          <h3>Models</h3>
+          <ul>
+            <li><h4><span className="date">4/12/21</span> My mother said "lorem ipsum dolor"</h4></li>
+            <li><h4><span className="date">4/12/21</span> My mother said "lorem ipsum dolor"</h4></li>
+            <li><h4><span className="date">4/12/21</span> My mother said "lorem ipsum dolor"</h4></li>
+            <li><h4><span className="date">4/12/21</span> My mother said "lorem ipsum dolor"</h4></li>
+            <li><h4><span className="date">4/12/21</span> My mother said "lorem ipsum dolor"</h4></li>
+            <li><h4><span className="date">4/12/21</span> My mother said "lorem ipsum dolor"</h4></li>
+            <li><h4><span className="date">4/12/21</span> My mother said "lorem ipsum dolor"</h4></li>
+            <li><h4><span className="date">4/12/21</span> My mother said "lorem ipsum dolor"</h4></li>
+          </ul>
+        </div>
+        <div class="model-form-wrap">
+          <Model />
+        </div>
+      </div>
     </div>
   );
 }
