@@ -9,7 +9,7 @@
   align-items: flex-start;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  padding: 1rem;
+  padding: 1rem 2rem;
   border-bottom: 1px solid #eee;
 }
 
@@ -39,6 +39,7 @@
 .models-list .date {
   font-size: 0.624rem;
   padding: 0.3125rem;
+  font-weight: normal;
 }
 
 .models-list h3 {
@@ -53,9 +54,17 @@
 }
 
 .model-form-wrap {
-  padding: 1rem 2rem;
+  padding: 2rem;
   width: calc(100% - 200px);
+  overflow-y: scroll;
 }
+
+.model-form-wrap .date {
+  font-size: 0.8125rem;
+  margin: 0;
+  color: #aaa;
+}
+
 .model-form ul {
   list-style: none;
   padding: 0;
@@ -81,4 +90,5 @@
 .model-form textarea {
   width: calc(100% - 56px);
   padding: 10px;
+  border: 1px solid #aaa;
 }
