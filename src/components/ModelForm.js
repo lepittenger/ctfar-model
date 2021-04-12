@@ -1,32 +1,54 @@
 import React from "react";
 
 class ModelForm extends React.Component {
+    titleRef = React.createRef();
+    cRef = React.createRef();
+    tRef = React.createRef();
+    fRef = React.createRef();
+    aRef = React.createRef();
+    rRef = React.createRef();
+
+    createModel = (event) => {
+        // stop the form from submitting
+        event.preventDefault();
+        const model = {
+            titleRef: this.titleRef.current.value,
+            cRef: this.cRef.current.value,
+            tRef: this.tRef.current.value,
+            fRef: this.fRef.current.value,
+            aRef: this.aRef.current.value,
+            rRef: this.rRef.current.value,
+        };
+        this.props.addModel(model);
+    };
     render() {
         return (
             <div className="model-form-wrap">
                 <p className="date">Mon Apr 12 at 2:26 PM</p>
-                <h3>A Title of the Model</h3>
-                <form className="model-form">
+                <form className="model-form" onBlur={this.createModel}>
                     <ul>
                         <li>
+                            <input className="titleInput" type="text" name="title" ref={this.titleRef} placeholder="Title"></input>
+                        </li>
+                        <li>
                             <label htmlFor="circumstance">C</label>
-                            <textarea type="text" name="circumstance" rows="3"></textarea>
+                            <textarea name="circumstance" ref={this.cRef} rows="3"></textarea>
                         </li>
                         <li>
                             <label htmlFor="thought">T</label>
-                            <textarea type="text" name="thought" rows="3"></textarea>
+                            <textarea name="thought" ref={this.tRef} rows="3"></textarea>
                         </li>
                         <li>
                             <label htmlFor="feeling">F</label>
-                            <input type="text" name="feeling"></input>
+                            <input type="text" name="feeling" ref={this.fRef}></input>
                         </li>
                         <li>
                             <label htmlFor="action">A</label>
-                            <textarea type="text" name="action" rows="3"></textarea>
+                            <textarea name="action" ref={this.aRef} rows="3"></textarea>
                         </li>
                         <li>
                             <label htmlFor="result">R</label>
-                            <textarea type="text" name="result" rows="3"></textarea>
+                            <textarea type="text" name="result" ref={this.rRef} rows="3"></textarea>
                         </li>
                     </ul>
                 </form>

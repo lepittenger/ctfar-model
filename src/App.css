@@ -65,6 +65,10 @@
   color: #aaa;
 }
 
+.model-form {
+  margin-top: 1rem;
+}
+
 .model-form ul {
   list-style: none;
   padding: 0;
@@ -91,4 +95,12 @@
   width: calc(100% - 56px);
   padding: 10px;
   border: 1px solid #aaa;
+}
+
+.model-form .titleInput {
+  border: none;
+  font-size: 1.875rem;
+  font-weight: bold;
+  padding-left: 0;
+  padding-right: 0;
 }
