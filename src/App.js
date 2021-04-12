@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import ModelsList from './components/ModelsList';
 import ModelForm from './components/ModelForm';
