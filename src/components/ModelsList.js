@@ -9,7 +9,14 @@ class ModelsList extends React.Component {
             <div className="models-list">
                 <h3>Models <span className="modelsCount">({modelsCount})</span> <button className="addNewModel">&#43;</button></h3>
                 <ul>
-                    {Object.keys(this.props.models).map(key => <ModelExcerpt key={key}details={this.props.models[key]} />)}
+                    {Object.keys(this.props.models).map(key => 
+                        <ModelExcerpt 
+                            key={key} 
+                            index={key}
+                            model={this.props.models[key]} 
+                            deleteModel={this.props.deleteModel}
+                        />
+                    )}
                 </ul>
             </div>
         )
